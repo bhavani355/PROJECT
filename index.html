@@ -2,30 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ECET Registration</title>
+  <b><title>User Registration</title></b>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>ECET Registration Form</h2>
-  <form id="ecetForm">
-    <label>First Name: <input type="text" id="fname" required></label>
-    <label>Last Name: <input type="text" id="lname" required></label>
-    <label>Father's Name: <input type="text" id="father" required></label>
-    <label>Mother's Name: <input type="text" id="mother" required></label>
-    <label>DOB: <input type="date" id="dob" required></label>
-    <label>Gender:
-      <select id="gender" required>
-        <option value="">Select</option>
-        <option>Male</option>
-        <option>Female</option>
-      </select>
-    </label>
-    <label>Address: <textarea id="address" required></textarea></label>
-    <label>Email: <input type="email" id="email" required></label>
-    <label>Phone: <input type="text" id="phone" required></label>
-    <label>Education: <input type="text" id="education" required></label>
-    <label>Photo: <input type="file" id="photo" accept="image/*" required></label>
-    <label>Signature: <input type="file" id="sign" accept="image/*" required></label>
+
+  <h2>User Registration Form</h2>
+   <h6>jenkins </h6>
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label>First Name:</label>
+    <input type="text" id="firstName">
+    <span class="error" id="firstNameError"></span>
+
+    <label>Last Name:</label>
+    <input type="text" id="lastName">
+    <span class="error" id="lastNameError"></span>
+
+    <label>Father's Name:</label>
+    <input type="text" id="fatherName">
+    <span class="error" id="fatherNameError"></span>
+
+    <label>Mother's Name:</label>
+    <input type="text" id="motherName">
+    <span class="error" id="motherNameError"></span>
+
+    <label>Date of Birth:</label>
+    <input type="date" id="dob">
+    <span class="error" id="dobError"></span>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <span class="error" id="genderError"></span>
+
+    <label>Address:</label>
+    <textarea id="address"></textarea>
+    <span class="error" id="addressError"></span>
+
+    <label>Education:</label>
+    <input type="text" id="education">
+    <span class="error" id="educationError"></span>
+
+    <label>Email:</label>
+    <input type="email" id="email">
+    <span class="error" id="emailError"></span>
+
+    <label>Phone Number:</label>
+    <input type="tel" id="phone">
+    <span class="error" id="phoneError"></span>
+
+    <label>Upload Photo:</label>
+    <input type="file" id="photo">
+    <span class="error" id="photoError"></span>
+
+    <label>Upload Signature:</label>
+    <input type="file" id="signature">
+    <span class="error" id="signatureError"></span>
+
+    <br><br>
     <button type="submit">Submit</button>
     <button type="reset">Reset</button>
   </form>
@@ -33,4 +68,3 @@
   <script src="sub.js"></script>
 </body>
 </html>
-
