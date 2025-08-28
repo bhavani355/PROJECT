@@ -1,20 +1,13 @@
-function validateForm() {
-  const form = document.getElementById('registrationForm');
-  const phone = form.phone.value.trim();
-  const email = form.email.value.trim();
+document.getElementById("ecetForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent form from submitting
 
-  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  const phone = document.getElementById("phone").value;
 
-  if (!emailPattern.test(email)) {
-    alert("Please enter a valid email address.");
-    return false;
-  }
-
-  if (phone.length !== 10 || isNaN(phone)) {
-    alert("Please enter a valid 10-digit phone number.");
-    return false;
+  if (!/^\d{10}$/.test(phone)) {
+    alert("Phone number must be 10 digits.");
+    return;
   }
 
   alert("Form submitted successfully!");
-  return true;
-}
+  this.reset(); // Optional: reset the form after submission
+});
