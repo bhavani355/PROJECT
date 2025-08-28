@@ -56,7 +56,7 @@ function validateForm() {
   }
 
   if (valid) {
-    alert("Form submitted successfully!");
+    alert("Form submitted successfully !");
   }
 
   return valid;
